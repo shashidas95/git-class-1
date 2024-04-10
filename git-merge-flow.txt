@@ -1,0 +1,14 @@
+  303  git checkout -b feature/feature2
+  304  git checkout master
+  305  git push origin feature/feature2
+  306  git checkout feature/feature2
+  307  touch feature2.txt
+  308  vim feature2.txt 
+  309  git add feature2.txt 
+  310  git commit -m "feature2 file added"
+  311  git push origin feature/feature2
+  312  git branch
+  313  git checkout master
+  314  git merge feature/feature2
+  315  git push origin master
+

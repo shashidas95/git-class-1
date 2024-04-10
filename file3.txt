@@ -1,1 +1,24 @@
- file 3 added
+It appears that you are encountering a divergence between your local branch and the remote branch. Git is prompting you to specify how to reconcile these divergent branches before proceeding with the pull operation.
+
+To resolve this, you have a few options:
+
+1. **Merge** (the default strategy):
+   You can merge the changes from the remote branch into your local branch. To do this, run:
+   ```bash
+   git pull git@github.com:shashidas95/git-class-1.git
+   ```
+   This will perform a merge between your local branch and the remote branch.
+
+2. **Rebase**:
+   Alternatively, you can rebase your changes onto the remote branch. This will replay your local commits on top of the remote branch's commits. To do this, run:
+   ```bash
+   git pull --rebase git@github.com:shashidas95/git-class-1.git
+   ```
+
+3. **Fast-forward only**:
+   If you're sure that your local branch's history is identical or ahead of the remote branch's history, you can specify to perform a fast-forward only pull. To do this, run:
+   ```bash
+   git pull --ff-only git@github.com:shashidas95/git-class-1.git
+   ```
+
+Choose the appropriate option based on your workflow and the status of your local and remote branches. After resolving the divergence, you should be able to perform the pull operation without encountering the error.
